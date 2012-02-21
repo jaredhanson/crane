@@ -9,7 +9,8 @@ crane.connect({ adapter: new Adapter(), host: '172.16.176.175' });
 function submitJob()  {
   console.log('submitting job...')
   crane.job('testing:my-queue:sleep', { seconds: 5 })
-    .delay(2000)
+    //.delay(2000)
+    .attempts(5)
     .submit();
 }
 
