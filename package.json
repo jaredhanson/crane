@@ -1,0 +1,27 @@
+{
+  "name": "crane",
+  "version": "0.0.0",
+  "description": "Diligent job queue for Node.js.",
+  "author": { "name": "Jared Hanson", "email": "jaredhanson@gmail.com", "url": "http://www.jaredhanson.net/" },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jaredhanson/crane.git"
+  },
+  "bugs": {
+    "url": "http://github.com/jaredhanson/crane/issues"
+  },
+  "main": "./lib/crane",
+  "dependencies": {
+    "pkginfo": "0.2.x",
+    "node-uuid": "1.x.x"
+  },
+  "devDependencies": {
+    "vows": "0.6.x"
+  },
+  "engines": { "node": ">= 0.4.0" },
+  "licenses": [ {
+    "type": "MIT",
+    "url": "http://www.opensource.org/licenses/MIT" 
+  } ],
+  "keywords": ["queue", "job", "work", "worker", "scheduler"]
+}

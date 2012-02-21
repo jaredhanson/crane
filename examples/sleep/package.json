@@ -1,0 +1,8 @@
+{
+  "name": "crane-examples-sleep",
+  "version": "0.0.0",
+  "dependencies": {
+    "crane": ">= 0.0.0",
+    "crane-amqp": ">= 0.0.0"
+  }
+}
