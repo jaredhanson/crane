@@ -16,6 +16,7 @@
     "urlpattern": "0.1.x",
     "node-uuid": "1.x.x",
     "utils-merge": "1.x.x",
+    "utils-flatten": "1.x.x",
     "debug": "0.7.x"
   },
   "devDependencies": {
