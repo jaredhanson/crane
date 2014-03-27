@@ -20,7 +20,7 @@ describe('Router', function() {
       expect(router.arr).to.have.length(2);
     });
     
-    it('should dispatch foo', function(done) {
+    it('should dispatch to first route', function(done) {
       var msg = {};
       msg.topic = 'foo'
       
@@ -32,7 +32,7 @@ describe('Router', function() {
       })
     });
     
-    it('should dispatch bar', function(done) {
+    it('should dispatch to second route', function(done) {
       var msg = {};
       msg.topic = 'bar'
       
@@ -44,7 +44,7 @@ describe('Router', function() {
       })
     });
     
-    it('should not dispatch baz', function(done) {
+    it('should not dispatch to non existent route', function(done) {
       var msg = {};
       msg.topic = '/baz'
       
@@ -74,7 +74,7 @@ describe('Router', function() {
         next();
       });
       
-    it('should dispatch foo', function(done) {
+    it('should dispatch', function(done) {
       var msg = {};
       msg.topic = 'foo'
     
@@ -112,7 +112,7 @@ describe('Router', function() {
       next();
     });
     
-    it('should dispatch foo', function(done) {
+    it('should dispatch', function(done) {
       var msg = {};
       msg.topic = 'foo'
       
@@ -145,7 +145,7 @@ describe('Router', function() {
       next();
     });
     
-    it('should dispatch news', function(done) {
+    it('should dispatch', function(done) {
       var msg = {};
       msg.topic = 'news/2013/04/20/foo'
       
@@ -169,7 +169,7 @@ describe('Router', function() {
       next(new Error('something went wrong'));
     });
     
-    it('should dispatch foo', function(done) {
+    it('should dispatch', function(done) {
       var msg = {};
       msg.topic = 'foo'
       
@@ -188,7 +188,7 @@ describe('Router', function() {
       throw new Error('something went horribly wrong');
     });
     
-    it('should dispatch foo', function(done) {
+    it('should dispatch', function(done) {
       var msg = {};
       msg.topic = 'foo'
       
@@ -217,7 +217,7 @@ describe('Router', function() {
         next();
       });
     
-    it('should dispatch foo', function(done) {
+    it('should dispatch', function(done) {
       var msg = {};
       msg.topic = 'foo'
       
@@ -249,7 +249,7 @@ describe('Router', function() {
         next();
       });
     
-    it('should dispatch foo', function(done) {
+    it('should dispatch', function(done) {
       var msg = {};
       msg.topic = 'foo'
       
@@ -259,6 +259,38 @@ describe('Router', function() {
         expect(msg.routedTo).to.have.length(2);
         expect(msg.routedTo[0]).to.equal('1');
         expect(msg.routedTo[1]).to.equal('1 error');
+        done();
+      })
+    });
+  });
+  
+  describe('with route containing error handling that is called due to an exception', function() {
+    var router = new Router();
+    
+    router.route('foo',
+      function(msg, next) {
+        msg.routedTo = [ '1' ];
+        throw new Error('1 exception');
+      },
+      function(msg, next) {
+        msg.routedTo.push('2');
+        next();
+      },
+      function(err, msg, next) {
+        msg.routedTo.push(err.message);
+        next();
+      });
+    
+    it('should dispatch', function(done) {
+      var msg = {};
+      msg.topic = 'foo'
+      
+      router.middleware(msg, function(err) {
+        if (err) { return done(err); }
+        expect(msg.routedTo).to.be.an.instanceOf(Array);
+        expect(msg.routedTo).to.have.length(2);
+        expect(msg.routedTo[0]).to.equal('1');
+        expect(msg.routedTo[1]).to.equal('1 exception');
         done();
       })
     });
