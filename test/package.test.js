@@ -1,11 +1,16 @@
 /* global describe, it, expect */
 
-var pkg = require('..');
+var crane = require('..');
 
 describe('crane', function() {
   
-  it('should export object', function() {
-    expect(pkg).to.be.an('object');
+  it('should export function', function() {
+    expect(crane).to.be.a('function');
+  });
+  
+  it('should export create', function() {
+    expect(crane.create).to.be.a('function');
+    expect(crane.create).to.equal(crane);
   });
   
 });
