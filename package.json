@@ -4,10 +4,11 @@
   "description": "Diligent work queue for Node.js.",
   "keywords": [
     "queue",
+    "mq",
     "job",
     "work",
-    "worker",
-    "scheduler"
+    "scheduler",
+    "worker"
   ],
   "author": {
     "name": "Jared Hanson",
@@ -31,18 +32,18 @@
   "dependencies": {
     "configurable": "0.0.x",
     "urlpattern": "0.1.x",
-    "node-uuid": "1.x.x",
     "utils-merge": "1.x.x",
     "utils-flatten": "1.x.x",
     "debug": "0.7.x"
   },
   "devDependencies": {
-    "vows": "0.6.x"
+    "mocha": "1.x.x",
+    "chai": "1.x.x"
   },
   "engines": {
     "node": ">= 0.4.0"
   },
   "scripts": {
-    "test": "NODE_PATH=lib node_modules/.bin/vows test/*-test.js test/**/*-test.js"
+    "test": "NODE_PATH=./lib node_modules/.bin/mocha --reporter spec --require test/node/bootstrap test/*.test.js"
   }
 }
