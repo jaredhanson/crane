@@ -28,7 +28,7 @@
       "url": "http://www.opensource.org/licenses/MIT"
     }
   ],
-  "main": "./lib/crane",
+  "main": "./lib",
   "dependencies": {
     "configurable": "0.0.x",
     "urlpattern": "0.1.x",
