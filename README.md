@@ -1,28 +1,23 @@
 # Crane
 
+[![Build](https://travis-ci.org/jaredhanson/crane.png)](https://travis-ci.org/jaredhanson/crane)
+[![Coverage](https://coveralls.io/repos/jaredhanson/crane/badge.png)](https://coveralls.io/r/jaredhanson/crane)
+[![Quality](https://codeclimate.com/github/jaredhanson/crane.png)](https://codeclimate.com/github/jaredhanson/crane)
+[![Dependencies](https://david-dm.org/jaredhanson/crane.png)](https://david-dm.org/jaredhanson/crane)
+[![Tips](http://img.shields.io/gittip/jaredhanson.png)](https://www.gittip.com/jaredhanson/)
+
+
+## Tests
+
+    $ npm install
+    $ make test
+
 ## Credits
 
   - [Jared Hanson](http://github.com/jaredhanson)
 
 ## License
 
-(The MIT License)
+[The MIT License](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2011 Jared Hanson
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+Copyright (c) 2011-2014 Jared Hanson <[http://jaredhanson.net/](http://jaredhanson.net/)>
