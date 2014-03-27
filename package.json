@@ -1,7 +1,7 @@
 {
   "name": "crane",
   "version": "0.1.0",
-  "description": "Diligent job queue for Node.js.",
+  "description": "Diligent work queue for Node.js.",
   "keywords": [
     "queue",
     "job",
