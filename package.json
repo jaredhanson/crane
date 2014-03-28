@@ -6,8 +6,8 @@
     "queue",
     "mq",
     "job",
+    "task",
     "work",
-    "scheduler",
     "worker"
   ],
   "author": {
