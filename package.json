@@ -1,6 +1,6 @@
 {
   "name": "crane",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Diligent work queue for Node.js.",
   "keywords": [
     "queue",
@@ -8,7 +8,8 @@
     "job",
     "task",
     "work",
-    "worker"
+    "worker",
+    "amqp"
   ],
   "author": {
     "name": "Jared Hanson",
